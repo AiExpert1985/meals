@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:meals/Screens/category_screen.dart';
+import 'package:meals/Screens/categories_screen.dart';
 
 void main() {
   runApp(
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(Object context) {
     return const MaterialApp(
-      home: CategoryScreen(),
+      home: CategoriesScreen(),
     );
   }
 }

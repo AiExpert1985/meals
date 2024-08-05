@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:meals/widgets/category/categories_grid.dart';
+import 'package:meals/widgets/categories/category_grid.dart';
 
-class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({super.key});
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class CategoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Categories'),
       ),
-      body: const CategoriesGridView(),
+      body: const CategoryGrid(),
     );
   }
 }
