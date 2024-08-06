@@ -5,7 +5,7 @@ import 'package:meals/Screens/meals_screen.dart';
 
 import 'package:meals/models/category.dart';
 import 'package:meals/models/meal.dart';
-import 'package:meals/providers/dummy_meals_provider.dart';
+import 'package:meals/providers/meals_provider.dart';
 
 class CategoryGridItem extends ConsumerWidget {
   final Category category;
@@ -16,7 +16,7 @@ class CategoryGridItem extends ConsumerWidget {
   });
 
   void _showCategoryMeals(BuildContext context, WidgetRef ref) {
-    List<Meal> meals = ref.read(dummyMealsProvider);
+    List<Meal> meals = ref.read(mealsProvider);
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) =>
