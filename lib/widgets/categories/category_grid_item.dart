@@ -4,8 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals/Screens/meals_screen.dart';
 
 import 'package:meals/models/category.dart';
-import 'package:meals/models/meal.dart';
-import 'package:meals/providers/meals_provider.dart';
+import 'package:meals/providers/selected_category_provider.dart';
 
 class CategoryGridItem extends ConsumerWidget {
   final Category category;
@@ -15,12 +14,16 @@ class CategoryGridItem extends ConsumerWidget {
     required this.category,
   });
 
-  void _showCategoryMeals(BuildContext context, WidgetRef ref) {
-    List<Meal> meals = ref.read(mealsProvider);
+  void _updateSelectedCategoryProvider(WidgetRef ref) {
+    ref
+        .read(selectedCategoryProvider.notifier)
+        .update((state) => state = category);
+  }
+
+  void _showMealsScreen(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) =>
-            MealsScreen(categoryTitle: category.title, meals: meals),
+        builder: (ctx) => const MealsScreen(),
       ),
     );
   }
@@ -29,7 +32,8 @@ class CategoryGridItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
       onTap: () {
-        _showCategoryMeals(context, ref);
+        _updateSelectedCategoryProvider(ref);
+        _showMealsScreen(context);
       },
       child: Container(
         decoration: BoxDecoration(
