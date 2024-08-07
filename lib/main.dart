@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:meals/Screens/categories_screen.dart';
+import 'package:meals/Screens/tabs_screen.dart';
 
-void main() {
-  runApp(
-    const ProviderScope(child: MyApp()),
-  );
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,7 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(Object context) {
     return const MaterialApp(
-      home: CategoriesScreen(),
+      home: TabsScreen(),
     );
   }
+}
+
+void main() {
+  runApp(
+    const ProviderScope(child: MyApp()),
+  );
 }
