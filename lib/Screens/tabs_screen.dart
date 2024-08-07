@@ -12,10 +12,10 @@ class TabsScreen extends ConsumerWidget {
 
   @override
   Widget build(Object context, WidgetRef ref) {
-    final activeScreen = ref.watch(activeScreenProvider);
+    final activeScreen = ref.watch(homeScreenContentProvider);
     Widget screenContent = const CategoriesScreen();
 
-    if (activeScreen == 1){
+    if (activeScreen == 1) {
       return const MealsScreen();
     }
 

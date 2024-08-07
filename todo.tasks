@@ -1,10 +1,22 @@
-ProjectName:
+Tasks Examples:
     ✘ new task @cancelled (7/28/2024, 6:59:29 PM)
     ✔ anther task @done (7/28/2024, 6:59:34 PM)
-    Riverpod : https://www.youtube.com/watch?v=pwflXIA-6YQ
-    Go Router : https://www.youtube.com/watch?v=h_zfsFKm5MY
-    Go Router : https://www.youtube.com/watch?v=_l6z9Qp5g5U
-    Go Router : https://www.youtube.com/watch?v=BgcXHA3EHJU&t=3s
+
+Riverpod : 
+    https://www.youtube.com/watch?v=pwflXIA-6YQ
+
+GoRouter:
+    https://www.youtube.com/watch?v=h_zfsFKm5MY
+    https://www.youtube.com/watch?v=_l6z9Qp5g5U
+    https://www.youtube.com/watch?v=BgcXHA3EHJU&t=3s
+    https://medium.com/@vimehraa29/flutter-go-router-the-crucial-guide-41dc615045bb
+    https://medium.com/@antonio.tioypedro1234/flutter-go-router-the-essential-guide-349ef39ec5b3
+
+Packages to try:
+    modular_ui
+        > create better (animated) Widgets
+    single_import_generator
+        > simplifies the import of packages (when there are too much)
 
 
     
