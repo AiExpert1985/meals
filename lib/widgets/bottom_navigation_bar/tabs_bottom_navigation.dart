@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class homeBottomNavigation extends StatelessWidget {
-  const homeBottomNavigation({super.key});
+class HomeBottomNavigation extends StatelessWidget {
+  const HomeBottomNavigation({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -24,7 +24,7 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(title: Text(content)),
       drawer: const LeftDrawer(),
       body: screenContent,
-      bottomNavigationBar: const homeBottomNavigation(),
+      bottomNavigationBar: const HomeBottomNavigation(),
     );
   }
 }
