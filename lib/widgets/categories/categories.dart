@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:meals/models/category.dart';
-import 'package:meals/widgets/categories/category_grid_item.dart';
+import 'package:meals/widgets/categories/category_item.dart';
 import 'package:meals/providers/available_categories_provider.dart';
 
-class CategoryGrid extends ConsumerWidget {
-  const CategoryGrid({super.key});
+class CategoriesScreen extends ConsumerWidget {
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

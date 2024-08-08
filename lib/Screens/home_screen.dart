@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meals/Screens/favorite_meals_screen.dart';
+import 'package:meals/widgets/categories/categories.dart';
+import 'package:meals/widgets/favorite/favorite.dart';
+import 'package:meals/providers/home_screen_content_name_provider.dart';
+import 'package:meals/widgets/bottom_navigation_bar/home_bottom_navigation.dart';
 
-import 'package:meals/widgets/bottom_navigation_bar/tabs_bottom_navigation.dart';
-import 'package:meals/widgets/drawer/side_drawer.dart';
-import 'package:meals/Screens/categories_screen.dart';
+import 'package:meals/widgets/drawer/left_drawer.dart';
 
 class HomeScreen extends ConsumerWidget {
   final String content;
@@ -16,8 +17,11 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(Object context, WidgetRef ref) {
-    Widget screenContent = const CategoriesScreen();
-    if (content == 'favorite') {
+    late Widget screenContent;
+    final String contentName = ref.watch(homeScreenContentNameProvider);
+    if (contentName == 'categories') {
+      screenContent = const CategoriesScreen();
+    } else {
       screenContent = const FavoriteMealsScreen();
     }
     return Scaffold(
