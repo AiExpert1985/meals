@@ -17,11 +17,11 @@ class HomeBottomNavigation extends ConsumerWidget {
               .update((state) => 'favorite'),
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.star),
+          icon: Icon(Icons.set_meal),
           label: 'Categories',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.set_meal),
+          icon: Icon(Icons.star),
           label: 'Favorite',
         ),
       ],

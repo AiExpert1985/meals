@@ -40,4 +40,13 @@ class Meal {
     required this.isVegetarian,
     required this.isLactoseFree,
   });
+
+  String get complexityText {
+    return complexity.name[0].toUpperCase() + complexity.name.substring(1);
+  }
+
+  String get affordabilityText {
+    return affordability.name[0].toUpperCase() +
+        affordability.name.substring(1);
+  }
 }
