@@ -6,10 +6,10 @@ import 'package:meals/widgets/bottom_navigation_bar/tabs_bottom_navigation.dart'
 import 'package:meals/widgets/drawer/side_drawer.dart';
 import 'package:meals/Screens/categories_screen.dart';
 
-class TabsScreen extends ConsumerWidget {
+class HomeScreen extends ConsumerWidget {
   final String content;
 
-  const TabsScreen({
+  const HomeScreen({
     super.key,
     this.content = 'categories',
   });
@@ -18,13 +18,13 @@ class TabsScreen extends ConsumerWidget {
   Widget build(Object context, WidgetRef ref) {
     Widget screenContent = const CategoriesScreen();
     if (content == 'favorite') {
-      return const FavoriteMealsScreen();
+      screenContent = const FavoriteMealsScreen();
     }
     return Scaffold(
       appBar: AppBar(title: Text(content)),
       drawer: const LeftDrawer(),
       body: screenContent,
-      bottomNavigationBar: const TabsBottomNavigation(),
+      bottomNavigationBar: const homeBottomNavigation(),
     );
   }
 }

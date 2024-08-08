@@ -12,12 +12,22 @@ GoRouter:
     https://medium.com/@vimehraa29/flutter-go-router-the-crucial-guide-41dc615045bb
     https://medium.com/@antonio.tioypedro1234/flutter-go-router-the-essential-guide-349ef39ec5b3
 
+Dependancies:
+    https://www.dhiwise.com/post/flutter-pub-get-how-to-sync-and-manage-dependencies
+    https://dart.dev/tools/pub/cmd/pub-add
+
+Flutter Commands:
+    https://docs.flutter.dev/reference/flutter-cli
+
 Packages to try:
     modular_ui
         > create better (animated) Widgets
     single_import_generator
         > simplifies the import of packages (when there are too much)
 
+Study:
+    10:30 => 2
+    11:30 => 
 
     
     
