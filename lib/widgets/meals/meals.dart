@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:meals/models/meal.dart';
+import 'package:meals/widgets/meals/meals_item.dart';
 
-class Meals extends ConsumerWidget {
+class Meals extends StatelessWidget {
   final List<Meal> meals;
   final String title;
 
@@ -14,13 +14,15 @@ class Meals extends ConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: ListView(
-        children: [
-          for (Meal meal in meals) Text(meal.title),
-        ],
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      // ListView.builder gives a list that is not loaded total, it loads as you scroll (used for long lists)
+      body: ListView.builder(
+        itemCount: meals.length,
+        itemBuilder: (ctx, index) => MealsItem(meal: meals[index]),
       ),
     );
   }

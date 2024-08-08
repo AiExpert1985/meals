@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_riverpod: ^2.5.1
   go_router: ^14.2.3
+  # transparent_image gives an image that used as placeholder until the real image is loaded
+  # MemoryImage(kTransparentImage)
+  transparent_image: ^2.0.1
 
 dev_dependencies:
   flutter_test:
