@@ -15,9 +15,7 @@ class CategoryGridItem extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
-      onTap: () {
-        context.pushNamed('/category/meals', extra: category);
-      },
+      onTap: () => context.pushNamed('/category/meals', extra: category),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
